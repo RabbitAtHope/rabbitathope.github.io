@@ -2,8 +2,8 @@
 
 import json
 import os
-import requests
 import urllib.request
+from urllib.error import URLError, HTTPError
 
 pageContent = "<p>"
 
@@ -17,10 +17,15 @@ servers = [
 ]
 
 for server in servers:
-    r = requests.get(server, allow_redirects=True, verify=False, timeout=3.0)
-    if r.status_code == 200:
-        pageContent += "✅"
-    else:
+    try:
+        with urllib.request.urlopen(server, timeout=3.0) as response:
+            if response.status == 200:
+                pageContent += "✅"
+            else:
+                pageContent += "❌"
+    except HTTPError as e:
+        pageContent += "❌"
+    except URLError as e:
         pageContent += "❌"
     pageContent += " " + server
         
