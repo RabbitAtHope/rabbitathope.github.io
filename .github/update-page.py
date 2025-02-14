@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 
+from datetime import datetime
 import json
 import os
+import pytz
 import time
 import urllib.request
 from urllib.error import URLError, HTTPError
+
+est = pytz.timezone('US/Eastern')
 
 pageContent = "<h2>Server Status</h2><p>"
 
@@ -21,16 +25,16 @@ for server in servers:
     try:
         with urllib.request.urlopen("https://"+server) as response:
             if response.status == 200:
-                pageContent += "✅"
+                pageContent += "✅ <span style='color:#67c354;'>"
             else:
-                pageContent += "❌"
+                pageContent += "❌ <span style='color:#ed3f56;'>"
     except HTTPError as e:
-        pageContent += "❌"
+        pageContent += "❌ <span style='color:#ed3f56;'>"
     except URLError as e:
-        pageContent += "❌"
+        pageContent += "❌ <span style='color:#ed3f56;'>"
     except Exception as e:
-        pageContent += "❌"
-    pageContent += " " + server + "<br>"
+        pageContent += "❌ <span style='color:#ed3f56;'>"
+    pageContent += " " + server + "</span><br>"
         
 pageContent += "</p>"
 
@@ -43,7 +47,7 @@ pageStart = "<!DOCTYPE html><html><body><style>" + \
     "h3 { font-size:12px;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "h4 { font-size:0.8em;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "</style>"
-pageEnd = "<footer>Last updated: "+str(time.strftime('%l:%M%p %z on %b %d, %Y'))+"</footer></body></html>"
+pageEnd = "<footer>Last updated: "+(datetime.now(est)).strftime('%l:%M%p %z on %b %d, %Y')+"</footer></body></html>"
 
 # Build final page
 newHtml = pageStart + pageContent + pageEnd
