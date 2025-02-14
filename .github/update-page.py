@@ -44,7 +44,7 @@ pageStart = "<!DOCTYPE html><html><body><style>" + \
     "h3 { font-size:12px;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "h4 { font-size:0.8em;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "</style>"
-pageEnd = "<footer>Last updated: "+(datetime.now(est)).strftime('%l:%M%p %z on %b %d, %Y')+"</footer></body></html>"
+pageEnd = "<footer>Last updated: "+(datetime.now()).strftime('%l:%M%p %z on %b %d, %Y')+"</footer></body></html>"
 
 # Build final page
 newHtml = pageStart + pageContent + pageEnd
