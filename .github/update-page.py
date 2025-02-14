@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
-import os
 import json
+import os
 import urllib.request
 
 html = open('index.html', 'r', encoding='utf-8').read()
 start_pos = html.find('\u200B') + len('\u200B') # zero-width spaces
 end_pos = html.find('\u200B', start_pos)
 
-newHtml = html[:start_pos] + 'Testing...' + html[end_pos:]
+pageStart = "<!DOCTYPE html><html><body>"
+pageContent = "<h1>Testing</h1><p>Testing...</p>"
+pageEnd = "</body></html>"
+newHtml = html[:start_pos] + pageStart + pageContent + pageEnd + html[end_pos:]
 
 overwrite = open('index.html', 'w', encoding='utf-8')
 overwrite.write(newHtml)
