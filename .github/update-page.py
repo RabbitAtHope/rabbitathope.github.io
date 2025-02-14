@@ -5,20 +5,20 @@ import os
 import urllib.request
 from urllib.error import URLError, HTTPError
 
-pageContent = "<p>"
+pageContent = "<h2>Server Status</h2><p>"
 
 servers = [
-    "https://anchor.hope.edu",
-    "https://blogs.hope.edu",
-    "https://hope.edu",
-    "https://magazine.hope.edu",
-    "https://opus.hope.edu",
-    "https://wths.hope.edu",
+    "anchor.hope.edu",
+    "blogs.hope.edu",
+    "hope.edu",
+    "magazine.hope.edu",
+    "opus.hope.edu",
+    "wths.hope.edu",
 ]
 
 for server in servers:
     try:
-        with urllib.request.urlopen(server) as response:
+        with urllib.request.urlopen("https://"+server) as response:
             if response.status == 200:
                 pageContent += "✅"
             else:
@@ -29,7 +29,7 @@ for server in servers:
         pageContent += "❌"
     except Exception as e:
         pageContent += "❌"
-    pageContent += " " + server
+    pageContent += " " + server + "<br>"
         
 pageContent += "</p>"
 
