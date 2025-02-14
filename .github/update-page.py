@@ -3,12 +3,9 @@
 from datetime import datetime
 import json
 import os
-import pytz
 import time
 import urllib.request
 from urllib.error import URLError, HTTPError
-
-est = pytz.timezone('US/Eastern')
 
 pageContent = "<h2>Server Status</h2><p>"
 
