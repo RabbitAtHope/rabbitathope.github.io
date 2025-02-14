@@ -3,7 +3,7 @@ name: Update Page
 on:
   push:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   update-page:
