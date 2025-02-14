@@ -2,9 +2,29 @@
 
 import json
 import os
+import requests
 import urllib.request
 
-# html = open('index.html', 'r', encoding='utf-8').read()
+pageContent = "<p>"
+
+servers = [
+    "anchor.hope.edu",
+    "blogs.hope.edu",
+    "hope.edu",
+    "magazine.hope.edu",
+    "opus.hope.edu",
+    "wths.hope.edu",
+]
+
+for server in servers:
+    r = requests.get(server, allow_redirects=True, verify=False, timeout=3.0)
+    if r.status_code == 200:
+        pageContent += "✅"
+    else:
+        pageContent += "❌"
+    pageContent += " " + server
+        
+pageContent += "</p>"
 
 # Build page content
 pageStart = "<!DOCTYPE html><html><body><style>" + \
@@ -15,7 +35,6 @@ pageStart = "<!DOCTYPE html><html><body><style>" + \
     "h3 { font-size:12px;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "h4 { font-size:0.8em;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "</style>"
-pageContent = "<h2>Testing</h2><p>Testing...</p>"
 pageEnd = "</body></html>"
 
 # Build final page
