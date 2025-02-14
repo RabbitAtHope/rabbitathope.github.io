@@ -3,7 +3,7 @@ name: Update Page
 on:
   push:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   update-page:
@@ -15,8 +15,6 @@ jobs:
         python-version: '3.x'
         
     - name: Get update
-      env:
-        TEMPEST_PUT: ${{ secrets.TEMPEST_PUT }}
       run: python .github/update-page.py
       
     - name: Configure Git
