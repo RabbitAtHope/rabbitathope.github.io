@@ -8,12 +8,12 @@ from urllib.error import URLError, HTTPError
 pageContent = "<p>"
 
 servers = [
-    "anchor.hope.edu",
-    "blogs.hope.edu",
-    "hope.edu",
-    "magazine.hope.edu",
-    "opus.hope.edu",
-    "wths.hope.edu",
+    "https://anchor.hope.edu",
+    "https://blogs.hope.edu",
+    "https://hope.edu",
+    "https://magazine.hope.edu",
+    "https://opus.hope.edu",
+    "https://wths.hope.edu",
 ]
 
 for server in servers:
