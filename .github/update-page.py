@@ -11,9 +11,14 @@ pageContent = "<h2>Server Status</h2><p>"
 servers = [
     "anchor.hope.edu",
     "blogs.hope.edu",
+    "events.hope.edu",
+    "forms.hope.edu",
+    "haworthhotel.com",
     "hope.edu",
     "magazine.hope.edu",
     "opus.hope.edu",
+    "providence.hope.edu",
+    "travel.hope.edu",
     "wths.hope.edu",
 ]
 
