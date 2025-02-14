@@ -5,7 +5,6 @@ import json
 import os
 import time
 import urllib.request
-from urllib.error import URLError, HTTPError
 
 pageContent = "<h2>Server Status</h2><p>"
 
@@ -22,15 +21,11 @@ for server in servers:
     try:
         with urllib.request.urlopen("https://"+server) as response:
             if response.status == 200:
-                pageContent += "✅ <span style='color:#67c354;'>" + server + "</span> (" + str(response.status) + ")"
+                pageContent += "✅ <span style='color:#67c354;'>" + server + "</span> <span style='font-size:10px;'>(" + str(response.status) + ")</span>"
             else:
-                pageContent += "🟨 <span style='color:#ed3f56;'>" + server + "</span> (" + str(response.status) + ")"
-    except HTTPError as e:
-        pageContent += "❌ <span style='color:#ed3f56;'>" + server + "</span>"
-    except URLError as e:
-        pageContent += "❌ <span style='color:#ed3f56;'>" + server + "</span>"
+                pageContent += "🟨 <span style='color:#ed3f56;'>" + server + "</span> <span style='font-size:10px;'>(" + str(response.status) + ")</span>"
     except Exception as e:
-        pageContent += "❌ <span style='color:#ed3f56;'>" + server + "</span>"
+        pageContent += "❌ <span style='color:#ed3f56;'>" + server + "</span> <span style='font-size:10px;'>(" + str(e) + ")</span>"
     pageContent += "<br>"
         
 pageContent += "</p>"
