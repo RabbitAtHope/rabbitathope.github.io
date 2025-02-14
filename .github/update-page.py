@@ -18,7 +18,7 @@ servers = [
 
 for server in servers:
     try:
-        with urllib.request.urlopen(server, timeout=3.0) as response:
+        with urllib.request.urlopen(server) as response:
             if response.status == 200:
                 pageContent += "✅"
             else:
@@ -26,6 +26,8 @@ for server in servers:
     except HTTPError as e:
         pageContent += "❌"
     except URLError as e:
+        pageContent += "❌"
+    except Exception as e:
         pageContent += "❌"
     pageContent += " " + server
         
