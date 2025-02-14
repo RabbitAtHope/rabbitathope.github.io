@@ -24,7 +24,14 @@ servers = [
 
 for server in servers:
     try:
-        with urllib.request.urlopen("https://"+server) as response:
+        req = urllib.request.Request(
+            "https://"+server, 
+            data=None, 
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+            }
+        )
+        with urllib.request.urlopen(req) as response:
             if response.status == 200:
                 pageContent += "✅ <span style='color:#67c354;'>" + server + "</span> <span style='font-size:10px;'>(" + str(response.status) + ")</span>"
             else:
