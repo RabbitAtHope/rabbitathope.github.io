@@ -2,6 +2,7 @@
 
 import json
 import os
+import time
 import urllib.request
 from urllib.error import URLError, HTTPError
 
@@ -42,7 +43,7 @@ pageStart = "<!DOCTYPE html><html><body><style>" + \
     "h3 { font-size:12px;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "h4 { font-size:0.8em;margin-block-start:0.4em;margin-block-end:0.4em; }" + \
     "</style>"
-pageEnd = "</body></html>"
+pageEnd = "<footer>Last updated: "+str(time.strftime('%l:%M%p %z on %b %d, %Y'))+"</footer></body></html>"
 
 # Build final page
 newHtml = pageStart + pageContent + pageEnd
