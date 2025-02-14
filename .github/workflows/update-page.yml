@@ -23,4 +23,4 @@ jobs:
       run: git config --global user.name "RabbitAtHope" && git config --global user.email "rabitoy@hope.edu"
       
     - name: Commit changes
-      run: git add README.md && git commit -m "Update page" && git push || echo "No changes"
+      run: git add index.html && git commit -m "Update page" && git push || echo "No changes"
