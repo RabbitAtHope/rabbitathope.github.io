@@ -5,7 +5,6 @@ layout: null
 @import url("pygment_highlights.css");
 
 :root {
-  /* config file CSS variables */
   --page-col: #1a1b26;
   --text-col: #c0caf5;
   --link-col: #2ac3de;
@@ -19,7 +18,6 @@ layout: null
   --footer-hover-col: #73daca;
   --highlight-green-col: #9ece6a;
 
-  /* common CSS variables */
   --body-font: 'Raleway', sans-serif;
   --header-font: 'Bebas Neue', sans-serif;
   --mid-col: #808080;
