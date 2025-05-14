@@ -46,8 +46,8 @@ layout: page
         {% endif %}
       </a>
 
-      {% if post.author %}
-        <span>👤 <strong><span class="highlight-green">{{ post.author | strip_html }}</span></strong>
+      {% if post.category %}
+        <span>📖 <span class="highlight-green">{{ post.category | strip_html }}</span></span>
       {% endif %}
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
