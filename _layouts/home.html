@@ -47,11 +47,11 @@ layout: page
       </a>
 
       {% if post.author %}
-        <span>By <strong><span class="highlight-green">{{ post.author | strip_html }}</span></strong>
+        <span>👤 <strong><span class="highlight-green">{{ post.author | strip_html }}</span></strong>
       {% endif %}
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        Posted on {{ post.date | date: date_format }}
+        {{ post.date | date: date_format }}
       </p>
 
       {% if thumbnail != "" %}
