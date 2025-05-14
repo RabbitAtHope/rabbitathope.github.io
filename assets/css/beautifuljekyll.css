@@ -17,6 +17,7 @@ layout: null
   --footer-text-col: #c0caf5;
   --footer-link-col: #2ac3de;
   --footer-hover-col: #73daca;
+  --highlight-green-col: #9ece6a;
 
   /* common CSS variables */
   --body-font: 'Raleway', sans-serif;
@@ -71,6 +72,9 @@ h4 {
 }
 h1, h2, h3, h4 {
   margin-top: 1.25rem;
+}
+.highlight-green {
+  color: var(--highlight-green-col);
 }
 a {
   color: var(--link-col);
