@@ -5,17 +5,17 @@ layout: null
 @import url("pygment_highlights.css");
 
 :root {
-  --page-col: #1a1b26;
-  --text-col: #c0caf5;
-  --link-col: #2ac3de;
-  --hover-col: #73daca;
-  --navbar-col: #414868;
-  --navbar-text-col: #c0caf5;
-  --navbar-border-col: #565f89;
-  --footer-col: #414868;
-  --footer-text-col: #c0caf5;
-  --footer-link-col: #2ac3de;
-  --footer-hover-col: #73daca;
+  --page-col: #121212;
+  --text-col: white;
+  --link-col: #02d8f3;
+  --hover-col: #fcee0a;
+  --navbar-col: #1e1e1e;
+  --navbar-text-col: white;
+  --navbar-border-col: #444;
+  --footer-col: #1e1e1e;
+  --footer-text-col: white;
+  --footer-link-col: #02d8f3;
+  --footer-hover-col: #fcee0a;
   --highlight-green-col: #9ece6a;
   --highlight-orange-col: #ff9e64;
   --highlight-red-col: #f7768e;
