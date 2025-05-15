@@ -35,6 +35,22 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 ```
 </details>
 
+### 📌 Whitelist Access
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+The OpenSSH service should only be accessible to a limited range of IP addresses, ideally off a whitelist that is enforced by the local firewall and/or by the OpenSSH service configuration file. You can use the `AllowUsers` and `AllowGroups` directives to make access as granular as possible.
+
+```console
+(editor) /etc/ssh/sshd_config
+
+Match Address {ip,ip,ip...}
+    AllowUsers {user} {user} {user}...
+```
+
+</details>
+
 </details>
 
 ---
