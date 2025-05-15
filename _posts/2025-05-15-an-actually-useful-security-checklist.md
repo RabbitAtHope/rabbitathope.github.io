@@ -17,6 +17,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 {: .box-note}
 *Package Name(s): openssh-server*<br>*Common Port(s): <strong>22</strong> (SSH)*
 </details>
@@ -27,6 +28,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 {: .box-note}
 *Package Name(s): apache2, httpd*<br>*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 
@@ -134,6 +136,7 @@ Header always set Strict-Transport-Security max-age=31536000
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 {: .box-note}
 *Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 </details>
