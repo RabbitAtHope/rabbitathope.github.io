@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Actually Useful Security Checklist
-subtitle: A security checklist that you can actually use
+subtitle: A security checklist you can actually use
 cover-img: /assets/img/avatar.png
 thumbnail-img: /assets/img/avatar.png
 share-img: /assets/img/avatar.png
@@ -15,17 +15,15 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ## 🔒 Secure Shell (SSH) Services: OpenSSH Server
 
-*Package Name(s): openssh-server*
-
-*Common Port(s): <strong>22</strong> (SSH)*
+{: .box-note}
+*Package Name(s): openssh-server*<br>*Common Port(s): <strong>22</strong> (SSH)*
 
 ---
 
 ## 🌎 Web (HTTP/HTTPS) Services: Apache HTTP
 
-*Package Name(s): apache2, httpd*
-
-*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
+{: .box-note}
+*Package Name(s): apache2, httpd*<br>*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 
 Unless otherwise stated, most of the Apache configuration changes below will require you to reload or restart Apache to fully apply them, i.e.:
 
@@ -127,4 +125,5 @@ Header always set Strict-Transport-Security max-age=31536000
 
 ## 🌎 Web (HTTP/HTTPS) Services: Apache Tomcat
 
+{: .box-note}
 *Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
