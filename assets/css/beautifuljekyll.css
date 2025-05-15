@@ -75,7 +75,7 @@ h1, h2, h3, h4 {
 }
 
 .highlight {
-  color: var(--hover-col);
+  color: #02d8f3;
 }
 .highlight-green {
   color: var(--highlight-green-col);
