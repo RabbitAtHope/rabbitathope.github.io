@@ -17,6 +17,8 @@ layout: null
   --footer-link-col: #2ac3de;
   --footer-hover-col: #73daca;
   --highlight-green-col: #9ece6a;
+  --highlight-orange-col: #ff9e64;
+  --highlight-red-col: #f7768e;
 
   --body-font: 'Raleway', sans-serif;
   --header-font: 'Bebas Neue', sans-serif;
@@ -71,9 +73,17 @@ h4 {
 h1, h2, h3, h4 {
   margin-top: 1.25rem;
 }
+
 .highlight-green {
   color: var(--highlight-green-col);
 }
+.highlight-orange {
+  color: var(--highlight-orange-col);
+}
+.highlight-red {
+  color: var(--highlight-red-col);
+}
+
 a {
   color: var(--link-col);
 }
