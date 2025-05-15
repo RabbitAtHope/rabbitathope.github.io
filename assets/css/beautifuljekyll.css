@@ -989,6 +989,7 @@ pre {
 .box-success {
   background-color: #98FB98;
   border-left-color: #3CB371;
+  color: black;
 }
 
 /* --- Misc blog post styles --- */
