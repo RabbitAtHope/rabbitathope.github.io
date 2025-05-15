@@ -17,7 +17,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 *Package Name(s): openssh-server*
 
-*Common Port(s): 22 (SSH)*
+*Common Port(s): <strong>22</strong> (SSH)*
 
 ---
 
@@ -25,7 +25,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 *Package Name(s): apache2, httpd*
 
-*Common Port(s): 80 (HTTP), 443 (HTTPS), 8080 (Alternate HTTP), 8443 (Alternate HTTPS)*
+*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 
 Unless otherwise stated, most of the Apache configuration changes below will require you to reload or restart Apache to fully apply them, i.e.:
 
@@ -123,4 +123,4 @@ Header always set Strict-Transport-Security max-age=31536000
 
 ## 🌎 Web (HTTP/HTTPS) Services: Apache Tomcat
 
-*Common Port(s): 80 (HTTP), 443 (HTTPS), 8080 (Alternate HTTP), 8443 (Alternate HTTPS)*
+*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
