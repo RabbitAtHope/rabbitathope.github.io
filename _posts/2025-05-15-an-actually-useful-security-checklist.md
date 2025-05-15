@@ -13,6 +13,10 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
+# 🗄️ Database Services
+
+---
+
 # 🔒 Secure Shell (SSH) Services
 
 ---
@@ -184,3 +188,5 @@ Header always set Strict-Transport-Security max-age=31536000
 {: .box-note}
 *Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 </details>
+
+---
