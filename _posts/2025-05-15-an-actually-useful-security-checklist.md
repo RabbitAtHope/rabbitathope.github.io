@@ -20,6 +20,21 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 {: .box-note}
 *Package Name(s): **openssh-server** (apt)*<br>*Common Port(s): <strong>22</strong> (SSH)*
+
+### 📌 Disable Insecure Ciphers
+
+<details markdown="1">
+<summary>Expand...</summary>
+#### Debian/Ubuntu:
+```console
+(editor) /etc/ssh/sshd_config
+
+MACs hmac-sha2-256,hmac-sha2-512,umac-64-etm@openssh.com,umac-128-etm@openssh.com
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com
+```
+</details>
+
 </details>
 
 ---
