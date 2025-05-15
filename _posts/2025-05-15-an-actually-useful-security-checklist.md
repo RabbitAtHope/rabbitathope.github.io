@@ -19,7 +19,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 <summary>Expand...</summary>
 
 {: .box-note}
-*Package Name(s): openssh-server*<br>*Common Port(s): <strong>22</strong> (SSH)*
+*Package Name(s): **openssh-server** (apt)*<br>*Common Port(s): <strong>22</strong> (SSH)*
 </details>
 
 ---
@@ -30,7 +30,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 <summary>Expand...</summary>
 
 {: .box-note}
-*Package Name(s): apache2, httpd*<br>*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
+*Package Name(s): **apache2** (apt), **httpd** (yum)*<br>*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 
 Unless otherwise stated, most of the Apache configuration changes below will require you to reload or restart Apache to fully apply them, i.e.:
 
@@ -42,7 +42,7 @@ systemctl restart apache2
 
 File locations may also vary depending on how you set up your web server.
 
-### Disable SSLv2/SSLv3/TLSv1/TLSv1.1
+### 📌 Disable SSLv2/SSLv3/TLSv1/TLSv1.1
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -55,7 +55,7 @@ SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 ```
 </details>
 
-### Disable TRACE
+### 📌 Disable TRACE
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -71,7 +71,7 @@ TraceEnable Off
 ✅ **Verification**: Use nmap with the <a href="https://nmap.org/nsedoc/scripts/http-methods.html">http-methods</a> script to scan open HTTP/HTTPS ports (usually 80/443) and verify that the TRACE method doesn't appear in the list of supported methods.
 </details>
 
-### Obscure Server Information
+### 📌 Obscure Server Information
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -88,7 +88,7 @@ ServerTokens Prod
 ✅ **Verification**: Use nmap with the service detection flag (`-sV`) to scan open HTTP/HTTPS ports (usually 80/443) and verify that the banner grab shows "Apache" instead of "Apache x.x.x".
 </details>
 
-### Remove Unnecessary Files/Directories
+### 📌 Remove Unnecessary Files/Directories
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -110,7 +110,7 @@ RedirectMatch 404 /\.svn
 ✅ **Verification**: Browse to these directories and files in any web browser and verify that you receive either a 403 Forbidden or a 404 Not Found response. You can also use curl.
 </details>
 
-### Set HTTP Strict Transport Security (HSTS)
+### 📌 Set HTTP Strict Transport Security (HSTS)
 
 <details markdown="1">
 <summary>Expand...</summary>
