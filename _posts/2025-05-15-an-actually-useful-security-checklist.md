@@ -14,13 +14,17 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 ---
 
 ## 🔒 Secure Shell (SSH) Services: OpenSSH Server
+
 *Package Name(s): openssh-server*
+
 *Common Port(s): 22 (SSH)*
 
 ---
 
 ## 🌎 Web (HTTP/HTTPS) Services: Apache HTTP
+
 *Package Name(s): apache2, httpd*
+
 *Common Port(s): 80 (HTTP), 443 (HTTPS), 8080 (Alternate HTTP), 8443 (Alternate HTTPS)*
 
 Unless otherwise stated, most of the Apache configuration changes below will require you to reload or restart Apache to fully apply them, i.e.:
@@ -115,5 +119,8 @@ Header always set Strict-Transport-Security max-age=31536000
 {: .box-success} Verification: Browse to the site and verify that you receive a Strict-Transport-Security header in the HTTP response, and that it has the configured age value. You can see it using your web browser's Developer Tools (Network -> Headers), or through nmap and other header grabber tools.
 </details>
 
+---
+
 ## 🌎 Web (HTTP/HTTPS) Services: Apache Tomcat
+
 *Common Port(s): 80 (HTTP), 443 (HTTPS), 8080 (Alternate HTTP), 8443 (Alternate HTTPS)*
