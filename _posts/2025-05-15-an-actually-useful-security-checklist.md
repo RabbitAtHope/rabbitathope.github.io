@@ -15,13 +15,18 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ## 🔒 Secure Shell (SSH) Services: OpenSSH Server
 
+<details markdown="1">
+<summary>Expand...</summary>
 {: .box-note}
 *Package Name(s): openssh-server*<br>*Common Port(s): <strong>22</strong> (SSH)*
+</details>
 
 ---
 
 ## 🌎 Web (HTTP/HTTPS) Services: Apache HTTP
 
+<details markdown="1">
+<summary>Expand...</summary>
 {: .box-note}
 *Package Name(s): apache2, httpd*<br>*Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
 
@@ -121,9 +126,14 @@ Header always set Strict-Transport-Security max-age=31536000
 ✅ **Verification**: Browse to the site and verify that you receive a Strict-Transport-Security header in the HTTP response, and that it has the configured age value. You can see it using your web browser's Developer Tools (Network -> Headers), or through nmap and other header grabber tools.
 </details>
 
+</details>
+
 ---
 
 ## 🌎 Web (HTTP/HTTPS) Services: Apache Tomcat
 
+<details markdown="1">
+<summary>Expand...</summary>
 {: .box-note}
 *Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
+</details>
