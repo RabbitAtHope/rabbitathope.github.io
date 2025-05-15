@@ -13,7 +13,11 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-## 🔒 Secure Shell (SSH) Services: OpenSSH Server
+# 🔒 Secure Shell (SSH) Services
+
+---
+
+## 🔒 OpenSSH Server
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -55,7 +59,11 @@ Match Address {ip,ip,ip...}
 
 ---
 
-## 🌎 Web (HTTP/HTTPS) Services: Apache HTTP
+# 🌎 Web (HTTP/HTTPS) Services
+
+---
+
+## 🌎 Apache HTTP
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -168,7 +176,7 @@ Header always set Strict-Transport-Security max-age=31536000
 
 ---
 
-## 🌎 Web (HTTP/HTTPS) Services: Apache Tomcat
+## 🌎 Apache Tomcat
 
 <details markdown="1">
 <summary>Expand...</summary>
