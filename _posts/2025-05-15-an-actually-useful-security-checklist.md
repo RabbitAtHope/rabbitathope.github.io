@@ -93,11 +93,16 @@ ServerTokens Prod
 <details markdown="1">
 <summary>Expand...</summary>
 Remove or conceal the following directories and files from `/var/www/html` (or whichever file location is tied to your web server setup):
-- `.git`
+- `.config`
+- `.env` (can leak hardcoded secrets)
+- `.git` (can leak hardcoded secrets)
 - `.gitattributes`
 - `.github`
+- `.gitignore`
 - `.gitinfo`
 - `.viminfo`
+- `phpinfo` (can expose PHP version information)
+- `phpinfo.php` (can expose PHP version information)
 
 If desired, you can entirely block specific sensitive file types from being browsed in `/etc/apache2/conf-enabled/security.conf` (or wherever your Apache configuration files are):
 
