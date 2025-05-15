@@ -35,7 +35,7 @@
           
           {% if include.type == "post" %} 
             {% if page.category %}
-              📖 <strong><span class="highlight-green">{{ page.category | strip_html }}</span></strong><br>
+              📖 <strong><span class="highlight">{{ page.category | strip_html }}</span></strong><br>
             {% endif%}
             <span class="post-meta">{{ page.date | date: date_format }}</span>
             {% if page.last-updated %}

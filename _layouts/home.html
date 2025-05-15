@@ -47,7 +47,7 @@ layout: page
       </a>
 
       {% if post.category %}
-        <span>📖 <strong><span class="highlight-green">{{ post.category | strip_html }}</span></span></strong>
+        <span>📖 <strong><span class="highlight">{{ post.category | strip_html }}</span></span></strong>
       {% endif %}
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
