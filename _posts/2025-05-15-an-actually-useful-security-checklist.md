@@ -322,7 +322,7 @@ The `context.xml` file controls access to the Manager Application that comes bun
 </Context>
 ```
 
-If you want to also allow a specific IP address, i.e. **[1].[2].[3].[4]**, format it like **[1]\.[2]\.[3]\.[4]** and add it to the allow statement with an "or" operator (`|`).
+If you want to also allow a specific IP address, i.e. **[1].[2].[3].[4]**, format it like **[1]\\.[2]\\.[3]\\.[4]** and add it to the allow statement with an "or" operator (`|`).
 
 </details>
 
