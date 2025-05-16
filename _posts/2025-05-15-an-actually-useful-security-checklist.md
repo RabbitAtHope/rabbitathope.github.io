@@ -18,6 +18,14 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
+## 🗄️ MariaDB
+
+---
+
+## 🗄️ MySQL
+
+---
+
 # 🔒 Secure Shell (SSH) Services
 
 ---
@@ -34,7 +42,9 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 #### Debian/Ubuntu:
+
 ```console
 (editor) /etc/ssh/sshd_config
 
@@ -42,6 +52,7 @@ MACs hmac-sha2-256,hmac-sha2-512,umac-64-etm@openssh.com,umac-128-etm@openssh.co
 KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
 Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com
 ```
+
 </details>
 
 ### 📌 Whitelist Access
@@ -97,6 +108,7 @@ File locations may also vary depending on how you set up your web server.
 
 SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 ```
+
 </details>
 
 ### 📌 Disable TRACE
@@ -113,6 +125,7 @@ TraceEnable Off
 
 {: .box-success}
 ✅ **Verification**: Use nmap with the <a href="https://nmap.org/nsedoc/scripts/http-methods.html">http-methods</a> script to scan open HTTP/HTTPS ports (usually 80/443) and verify that the TRACE method doesn't appear in the list of supported methods.
+
 </details>
 
 ### 📌 Enforce HTTP Strict Transport Security (HSTS)
@@ -131,6 +144,7 @@ Header always set Strict-Transport-Security max-age=31536000
 
 {: .box-success}
 ✅ **Verification**: Browse to the site and verify that you receive a Strict-Transport-Security header in the HTTP response, and that it has the configured age value. You can see it using your web browser's Developer Tools (Network -> Headers), or through nmap and other header grabber tools.
+
 </details>
 
 ### 📌 Hide Server Information
@@ -148,6 +162,7 @@ ServerTokens Prod
 
 {: .box-success}
 ✅ **Verification**: Use nmap with the service detection flag (`-sV`) to scan open HTTP/HTTPS ports (usually 80/443) and verify that the banner grab shows "Apache" instead of "Apache x.x.x".
+
 </details>
 
 ### 📌 Remove Unnecessary Files/Directories
@@ -175,6 +190,7 @@ RedirectMatch 404 /\.svn
 
 {: .box-success}
 ✅ **Verification**: Browse to these directories and files in any web browser and verify that you receive either a 403 Forbidden or a 404 Not Found response. You can also use curl.
+
 </details>
 
 </details>
@@ -188,6 +204,7 @@ RedirectMatch 404 /\.svn
 
 {: .box-note}
 *Common Port(s): <strong>80</strong> (HTTP), <strong>443</strong> (HTTPS), <strong>8080</strong> (Alternate HTTP), <strong>8443</strong> (Alternate HTTPS)*
+
 </details>
 
 ---
