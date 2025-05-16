@@ -309,6 +309,8 @@ RedirectMatch 404 /\.svn
 {: .box-note}
 *Common Port(s): **80** (HTTP), **443** (HTTPS), **8080** (Alternate HTTP), **8443** (Alternate HTTPS)*
 
+Unless otherwise stated, you will usually have to run the Tomcat shutdown and startup scripts (or restart the service if it's configured as one) to fully apply these changes.
+
 ### 📌 Restrict Access To Manager Application
 
 The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1):
