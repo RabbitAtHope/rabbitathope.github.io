@@ -348,6 +348,7 @@ Remove or conceal the following **dotfile** (hidden by default on Linux unless l
 - `composer.lock`
 
 Remove or conceal the following other directories and files:
+- `docker-compose.yml` (exposes Docker configuration information and services)
 - `Gruntfile.js`
 - `npm-shrinkwrap.json` (exposes dependencies and version information)
 - `package.json` (exposes dependencies and version information)
