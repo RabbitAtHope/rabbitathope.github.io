@@ -54,6 +54,8 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 {: .box-note}
 *Package Name(s): **openssh-server** (apt)*<br>*Common Port(s): <strong>22</strong> (SSH)*
 
+Unless otherwise stated, most of the configuration changes below will require you to reload or restart the service to fully apply them.
+
 ### 📌 Disable Insecure Ciphers
 
 <details markdown="1">
