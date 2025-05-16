@@ -166,6 +166,8 @@ qwerty
 
 The OpenSSH service should only be accessible to a limited range of IP addresses, ideally off a whitelist that is enforced by the local firewall and/or by the OpenSSH service configuration file. You can use the `AllowUsers` and `AllowGroups` directives to make access as granular as possible.
 
+#### Debian/Ubuntu:
+
 ```console
 (editor) /etc/ssh/sshd_config
 
@@ -205,6 +207,7 @@ File locations may also vary depending on how you set up your web server.
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 #### Debian/Ubuntu:
 
 ```console
@@ -219,6 +222,7 @@ SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 #### Debian/Ubuntu:
 
 ```console
@@ -255,6 +259,7 @@ Header always set Strict-Transport-Security max-age=31536000
 
 <details markdown="1">
 <summary>Expand...</summary>
+
 #### Debian/Ubuntu:
 
 ```console
@@ -309,11 +314,13 @@ RedirectMatch 404 /\.svn
 {: .box-note}
 *Common Port(s): **80** (HTTP), **443** (HTTPS), **8080** (Alternate HTTP), **8443** (Alternate HTTPS)*
 
-Unless otherwise stated, you will usually have to run the Tomcat shutdown and startup scripts (or restart the service if it's configured as one) to fully apply these changes.
+Unless otherwise stated, you will usually have to run the Tomcat shutdown and startup scripts (or restart the service if it's configured as one) to fully apply these changes. `$CATALINA_HOME` on most installations is something like `/home/tomcat/` or `/opt/tomcat/` (Debian/Ubuntu).
 
 ### 📌 Restrict Access To Manager Application
 
-The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1):
+The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1).
+
+#### Debian/Ubuntu:
 
 ```console
 (editor) $CATALINA_HOME/webapps/manager/META-INF/context.xml
