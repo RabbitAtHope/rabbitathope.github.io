@@ -71,6 +71,71 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 
 </details>
 
+### 📌 Enforce Strong Passwords
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+You can enforce strong SSH passwords using PAM.
+
+```console
+(editor) /etc/ssh/sshd_config
+
+UsePAM yes
+PasswordAuthentication yes
+
+apt install libpam-pwquality
+```
+
+```
+(editor) /etc/pam.d/common-password
+
+password requisite pam_pwquality.so retry=3 minlen={minimum length} ucredit=-{number of uppercase letters} lcredit=-{number of lowercase letters} dcredit=-{number of digits} ocredit=-{number of special characters}
+```
+
+Make sure the settings also match in this configuration file:
+
+```console
+(editor) /etc/security/pwquality.conf
+
+minlen = {minimum length}
+ucredit = -{number of uppercase letters}
+lcredit = -{number of lowercase letters}
+dcredit = -{number of digits}
+ocredit = -{number of special characters}
+```
+
+You can also block common passwords like this:
+
+```console
+(editor) /etc/pam.d/common-password
+
+password requisite ... dictcheck=1 (add to the end of the existing line)
+```
+
+```console
+(editor) /etc/security/pwquality.conf
+
+dictcheck = 1
+dictpath = /usr/share/dict/cracklib-small (or a custom wordlist you made)
+```
+
+Some recommended "bad passwords" to block if you make a custom wordlist are:
+
+```console
+1234
+123456
+admin
+letmein
+password
+qwerty
+```
+
+{: .box-success}
+✅ **Verification**: Change a user's password with passwd (sudo passwd {user}) and verify that you can't set a password that does not conform to the configured requirements.
+
+</details>
+
 ### 📌 Whitelist Access
 
 <details markdown="1">
