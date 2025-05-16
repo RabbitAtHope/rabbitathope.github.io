@@ -311,7 +311,7 @@ RedirectMatch 404 /\.svn
 
 ### 📌 Restrict Access To Manager Application
 
-The `context.xml` controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1):
+The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1):
 
 ```console
 (editor) $CATALINA_HOME/webapps/manager/META-INF/context.xml
@@ -322,7 +322,7 @@ The `context.xml` controls access to the Manager Application that comes bundled 
 </Context>
 ```
 
-If you want to also allow a specific IP address, i.e. `[1].[2].[3].[4]`, format it like `[1]\.[2]\.[3]\.[4]`.
+If you want to also allow a specific IP address, i.e. **[1].[2].[3].[4]**, format it like **[1]\.[2]\.[3]\.[4]**.
 
 </details>
 
