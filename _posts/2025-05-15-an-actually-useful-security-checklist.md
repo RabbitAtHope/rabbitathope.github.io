@@ -304,6 +304,9 @@ RedirectMatch 404 /\.svn
 
 ### 📌 (mod_status) Restrict Access To Server Status Page
 
+<details markdown="1">
+<summary>Expand...</summary>
+
 ```console
 (editor) /etc/apache2/mods-enabled/status.conf
 
@@ -313,6 +316,8 @@ RedirectMatch 404 /\.svn
     Require ip {ip ip ip...}
 </Location>
 ```
+
+</details>
 
 </details>
 
