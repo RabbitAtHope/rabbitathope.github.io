@@ -302,7 +302,7 @@ RedirectMatch 404 /\.svn
 
 </details>
 
-### 📌 (mod_status) Restrict Access To Server Status Page
+### 📌 (<span style='highlight'>mod_status</span>) Restrict Access To Server Status Page
 
 <details markdown="1">
 <summary>Expand...</summary>
