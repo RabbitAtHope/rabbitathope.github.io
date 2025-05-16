@@ -333,7 +333,7 @@ Remove or conceal the following directories and files from `/var/www/html` (or w
 - `.env` (can leak hardcoded secrets)
 - `.eslintrc`
 - `.git` (can leak hardcoded secrets)
- - `/config` (can leak hardcoded secrets)
+  - `/config` (can leak hardcoded secrets)
 - `.gitattributes`
 - `.github`
 - `.gitignore`
