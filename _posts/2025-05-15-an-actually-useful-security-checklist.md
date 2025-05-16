@@ -53,6 +53,27 @@ sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host!='localhost'; F
 
 </details>
 
+### 📌 Remove Anonymous Accounts
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+#### Debian/Ubuntu:
+
+```console
+mysql -u root -p
+
+SELECT User, Host FROM mysql.user WHERE User = '';
+
+DELETE FROM mysql.user WHERE User = '';
+
+FLUSH PRIVILEGES;
+
+exit;
+```
+
+</details>
+
 ### 📌 Set Strong Root Password
 
 <details markdown="1">
