@@ -21,6 +21,8 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 <details markdown="1">
 <summary>Expand...</summary>
 
+---
+
 ## 🗄️ Database Services
 
 ---
@@ -532,6 +534,8 @@ You can also configure a login requirement and a specific user that is authorize
 
 <details markdown="1">
 <summary>Expand...</summary>
+
+---
 
 ## 🪟 Windows
 
