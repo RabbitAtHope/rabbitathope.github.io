@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create safe directories
-        run: git config --global --add safe.directory /github/workspace
+        run: git config --system --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
