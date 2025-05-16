@@ -314,7 +314,13 @@ RedirectMatch 404 /\.svn
 {: .box-note}
 *Common Port(s): **80** (HTTP), **443** (HTTPS), **8080** (Alternate HTTP), **8443** (Alternate HTTPS)*
 
-Unless otherwise stated, you will usually have to run the Tomcat shutdown and startup scripts (or restart the service if it's configured as one) to fully apply these changes. `$CATALINA_HOME` on most installations is something like `/home/tomcat/` or `/opt/tomcat/` (Debian/Ubuntu).
+Unless otherwise stated, you will usually have to run the Tomcat shutdown and startup scripts (or restart the service if it's configured as one) to fully apply these changes.
+
+`$CATALINA_HOME` on most installations is something like `/home/tomcat/` or `/opt/tomcat/` (Debian/Ubuntu). If you need to manually tell the server where it is, you can do it like this:
+
+```console
+export CATALINA_HOME={directory}
+```
 
 ### 📌 Restrict Access To Manager Application
 
