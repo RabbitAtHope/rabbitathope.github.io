@@ -272,8 +272,18 @@ exclude:
   - docs/
 
 plugins:
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
   - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-titles-from-headings
   - jekyll-toc
 
 toc:
