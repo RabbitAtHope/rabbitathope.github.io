@@ -309,7 +309,7 @@ Header always set Strict-Transport-Security max-age=31536000
 
 </details>
 
-### 📌 Enforce HTTP To HTTPS Conversion
+### 📌 Enforce HTTP To HTTPS Rewrite
 
 <details markdown="1">
 <summary>Expand...</summary>
