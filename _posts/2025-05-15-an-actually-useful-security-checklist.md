@@ -309,6 +309,21 @@ RedirectMatch 404 /\.svn
 {: .box-note}
 *Common Port(s): **80** (HTTP), **443** (HTTPS), **8080** (Alternate HTTP), **8443** (Alternate HTTPS)*
 
+### 📌 Restrict Access To Manager Application
+
+The `context.xml` controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1):
+
+```console
+(editor) $CATALINA_HOME/webapps/manager/META-INF/context.xml
+
+<Context antiResourceLocking="false" privileged="true">
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+           allow="127\.\d+\.\d+\.\d+|::1" />
+</Context>
+```
+
+If you want to also allow a specific IP address, i.e. `[1].[2].[3].[4]`, format it like `[1]\.[2]\.[3]\.[4]`.
+
 </details>
 
 ---
