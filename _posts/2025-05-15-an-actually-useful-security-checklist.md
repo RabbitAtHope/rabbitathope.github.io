@@ -449,3 +449,15 @@ You can also configure a login requirement and a specific user that is authorize
 </details>
 
 ---
+
+## 🌎 PHP
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+{: .box-note}
+*Common Port(s): **80** (HTTP), **443** (HTTPS), **8080** (Alternate HTTP), **8443** (Alternate HTTPS)*
+
+</details>
+
+---
