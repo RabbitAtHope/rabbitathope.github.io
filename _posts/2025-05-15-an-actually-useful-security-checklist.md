@@ -76,7 +76,11 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 <details markdown="1">
 <summary>Expand...</summary>
 
+```console
+(editor) /etc/ssh/sshd_config
 
+PermitRootLogin no
+```
 
 </details>
 
