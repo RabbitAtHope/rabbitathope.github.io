@@ -330,6 +330,7 @@ ServerTokens Prod
 <summary>Expand...</summary>
 
 Remove or conceal the following **dotfile** (hidden by default on Linux unless listed with `ls -la`) directories and files from `/var/www/html` (or whichever file location is tied to your web server setup):
+- `.cache`
 - `.config`
 - `.env` (can leak hardcoded secrets)
 - `.eslintrc`
@@ -340,6 +341,7 @@ Remove or conceal the following **dotfile** (hidden by default on Linux unless l
 - `.gitignore`
 - `.gitinfo`
 - `.gitmodules`
+- `.gnupg` (contains PGP information)
 - `.jshintrc`
 - `.nvmrc`
 - `.travis.yml`
