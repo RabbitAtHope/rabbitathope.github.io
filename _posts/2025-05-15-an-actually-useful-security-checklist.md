@@ -324,6 +324,9 @@ export CATALINA_HOME={directory}
 
 ### 📌 Restrict Access To Manager Application
 
+<details markdown="1">
+<summary>Expand...</summary>
+
 The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1).
 
 #### Debian/Ubuntu:
@@ -338,6 +341,8 @@ The `context.xml` file controls access to the Manager Application that comes bun
 ```
 
 If you want to also allow a specific IP address, i.e. **[1].[2].[3].[4]**, format it like **[1]\\.[2]\\.[3]\\.[4]** and add it to the allow statement with an "or" operator (`|`).
+
+</details>
 
 </details>
 
