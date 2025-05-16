@@ -5,9 +5,9 @@ jobs:
     name: Build Jekyll
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Create safe directories
         run: git config --global --add safe.directory /github/workspace
+      - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
