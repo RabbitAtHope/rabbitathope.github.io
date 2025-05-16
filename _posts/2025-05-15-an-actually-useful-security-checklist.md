@@ -24,7 +24,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 <summary>Expand...</summary>
 
 {: .box-note}
-*Common Port(s): *
+*Common Port(s): **3306***
 
 </details>
 
@@ -36,7 +36,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 <summary>Expand...</summary>
 
 {: .box-note}
-*Common Port(s): *
+*Common Port(s): **3306***
 
 </details>
 
