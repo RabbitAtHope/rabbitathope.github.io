@@ -38,6 +38,26 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 {: .box-note}
 *Common Port(s): **3306***
 
+The best way to quickly harden a MySQL installation is to run the built-in `sudo mysql_secure_installation` script and follow all the instructions it gives you, but the manual steps are provided below in case you want to do any of these steps yourself by hand.
+
+### 📌 Set Strong Root Password
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+#### Debian/Ubuntu:
+
+```console
+sudo mysql
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{password}';
+FLUSH PRIVILEGES;
+
+exit;
+```
+
+</details>
+
 </details>
 
 ---
