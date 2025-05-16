@@ -331,19 +331,24 @@ ServerTokens Prod
 Remove or conceal the following directories and files from `/var/www/html` (or whichever file location is tied to your web server setup):
 - `.config`
 - `.env` (can leak hardcoded secrets)
+- `.eslintrc`
 - `.git` (can leak hardcoded secrets)
 - `.gitattributes`
 - `.github`
 - `.gitignore`
 - `.gitinfo`
+- `.gitmodules`
+- `.jshintrc`
+- `.nvmrc`
+- `.travis.yml`
 - `.viminfo`
 - `composer.json`
 - `composer.lock`
 - `Gruntfile.js`
 - `npm-shrinkwrap.json` (exposes dependencies and version information)
 - `package.json` (exposes dependencies and version information)
-- `phpinfo` (can expose PHP version information)
-- `phpinfo.php` (can expose PHP version information)
+- `phpinfo` (exposes PHP version information)
+- `phpinfo.php` (exposes PHP version information)
 
 If desired, you can entirely block specific sensitive file types from being browsed in `/etc/apache2/conf-enabled/security.conf` (or wherever your Apache configuration files are):
 
