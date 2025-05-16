@@ -255,7 +255,7 @@ service apache2 restart
 systemctl restart apache2
 ```
 
-File locations may also vary depending on how you set up your web server. You may also need to install certain modules (i.e. mod_rewrite, mod_status) using `a2enmod` where needed.
+File locations may also vary depending on how you set up your web server. You may also need to install or enable certain modules (**mod_headers**, **mod_rewrite**, **mod_status**) using `a2enmod` where needed.
 
 ### 📌 Disable SSLv2/SSLv3/TLSv1/TLSv1.1
 
