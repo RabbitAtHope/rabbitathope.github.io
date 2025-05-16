@@ -91,7 +91,7 @@ apt install libpam-pwquality
 
 Then set your password requirements in the PAM configuration file:
 
-```
+```console
 (editor) /etc/pam.d/common-password
 
 password requisite pam_pwquality.so retry=3 minlen={minimum length} ucredit=-{number of uppercase letters} lcredit=-{number of lowercase letters} dcredit=-{number of digits} ocredit=-{number of special characters}
