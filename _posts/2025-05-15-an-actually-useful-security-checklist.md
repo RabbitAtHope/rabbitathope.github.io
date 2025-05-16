@@ -290,25 +290,6 @@ TraceEnable Off
 
 </details>
 
-### 📌 Enforce HTTP Strict Transport Security (HSTS)
-
-<details markdown="1">
-<summary>Expand...</summary>
-The maximum age value can vary depending on your preferences, but the default value of 31536000 I usually use has never caused any issues.
-
-#### Debian/Ubuntu:
-
-```console
-(editor) /etc/apache2/sites-enabled/(config files)
-
-Header always set Strict-Transport-Security max-age=31536000
-```
-
-{: .box-success}
-✅ **Verification**: Browse to the site and verify that you receive a Strict-Transport-Security header in the HTTP response, and that it has the configured age value. You can see it using your web browser's Developer Tools (Network -> Headers), or through nmap and other header grabber tools.
-
-</details>
-
 ### 📌 Hide Server Information
 
 <details markdown="1">
@@ -353,6 +334,25 @@ RedirectMatch 404 /\.svn
 
 {: .box-success}
 ✅ **Verification**: Browse to these directories and files in any web browser and verify that you receive either a 403 Forbidden or a 404 Not Found response. You can also use curl.
+
+</details>
+
+### 📌 <span class='highlight'>mod_headers</span>: Enforce HTTP Strict Transport Security (HSTS) Header
+
+<details markdown="1">
+<summary>Expand...</summary>
+The maximum age value can vary depending on your preferences, but the default value of 31536000 I usually use has never caused any issues.
+
+#### Debian/Ubuntu:
+
+```console
+(editor) /etc/apache2/sites-enabled/(config files)
+
+Header always set Strict-Transport-Security max-age=31536000
+```
+
+{: .box-success}
+✅ **Verification**: Browse to the site and verify that you receive a Strict-Transport-Security header in the HTTP response, and that it has the configured age value. You can see it using your web browser's Developer Tools (Network -> Headers), or through nmap and other header grabber tools.
 
 </details>
 
