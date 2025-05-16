@@ -78,6 +78,8 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 
 You can enforce strong SSH passwords using PAM.
 
+First, enable PAM in the SSH configuration file:
+
 ```console
 (editor) /etc/ssh/sshd_config
 
@@ -86,6 +88,8 @@ PasswordAuthentication yes
 
 apt install libpam-pwquality
 ```
+
+Then set your password requirements in the PAM configuration file:
 
 ```
 (editor) /etc/pam.d/common-password
