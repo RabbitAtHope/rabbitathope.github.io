@@ -38,7 +38,20 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 {: .box-note}
 *Common Port(s): **3306***
 
-The best way to quickly harden a MySQL installation is to run the built-in `sudo mysql_secure_installation` script and follow all the instructions it gives you, but the manual steps are provided below in case you want to do any of these steps yourself by hand.
+The best way to quickly harden a MySQL installation is to run the built-in `mysql_secure_installation` script and follow all the instructions it gives you, but the manual steps are provided below in case you want to do any of these steps yourself by hand.
+
+### 📌 Disable Remote Root Login
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+#### Debian/Ubuntu:
+
+```console
+sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host!='localhost'; FLUSH PRIVILEGES;"
+```
+
+</details>
 
 ### 📌 Set Strong Root Password
 
