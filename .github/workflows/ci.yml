@@ -5,6 +5,8 @@ jobs:
     name: Build Jekyll
     runs-on: ubuntu-latest
     steps:
+      - name: Check safe directories
+        run: ls -ld $GITHUB_WORKSPACE
       - name: Create safe directories
         run: git config --system --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/checkout@v4
