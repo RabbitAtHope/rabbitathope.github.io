@@ -328,7 +328,8 @@ ServerTokens Prod
 
 <details markdown="1">
 <summary>Expand...</summary>
-Remove or conceal the following directories and files from `/var/www/html` (or whichever file location is tied to your web server setup):
+
+Remove or conceal the following **dotfile** (hidden by default on Linux unless listed with `ls -la`) directories and files from `/var/www/html` (or whichever file location is tied to your web server setup):
 - `.config`
 - `.env` (can leak hardcoded secrets)
 - `.eslintrc`
@@ -345,6 +346,8 @@ Remove or conceal the following directories and files from `/var/www/html` (or w
 - `.viminfo`
 - `composer.json`
 - `composer.lock`
+
+Remove or conceal the following other directories and files:
 - `Gruntfile.js`
 - `npm-shrinkwrap.json` (exposes dependencies and version information)
 - `package.json` (exposes dependencies and version information)
