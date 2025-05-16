@@ -265,7 +265,7 @@ File locations may also vary depending on how you set up your web server. You ma
 #### Debian/Ubuntu:
 
 ```console
-(editor) /etc/apache2/sites-enabled/(ssl config file)
+(editor) /etc/apache2/sites-enabled/(ssl config files)
 
 SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 ```
@@ -287,6 +287,21 @@ TraceEnable Off
 
 {: .box-success}
 ✅ **Verification**: Use nmap with the <a href="https://nmap.org/nsedoc/scripts/http-methods.html">http-methods</a> script to scan open HTTP/HTTPS ports (usually 80/443) and verify that the TRACE method doesn't appear in the list of supported methods.
+
+</details>
+
+### 📌 Enable Custom Error Page
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+The default Apache error page exposes version information and shows exactly what version and build of Apache you have on your server. To conceal this information, you should create a custom error page and set it as the default error page in the Apache configuration file:
+
+```console
+(editor) /etc/apache2/sites-enabled/(config files)
+
+ErrorDocument 404 {file}
+```
 
 </details>
 
@@ -322,6 +337,11 @@ Remove or conceal the following directories and files from `/var/www/html` (or w
 - `.gitignore`
 - `.gitinfo`
 - `.viminfo`
+- `composer.json`
+- `composer.lock`
+- `Gruntfile.js`
+- `npm-shrinkwrap.json` (exposes dependencies and version information)
+- `package.json` (exposes dependencies and version information)
 - `phpinfo` (can expose PHP version information)
 - `phpinfo.php` (can expose PHP version information)
 
