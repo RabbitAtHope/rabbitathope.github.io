@@ -71,6 +71,15 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 
 </details>
 
+### 📌 Disable Root Login
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+
+
+</details>
+
 ### 📌 Enforce Strong Passwords
 
 <details markdown="1">
