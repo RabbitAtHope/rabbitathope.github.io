@@ -7,6 +7,7 @@ thumbnail-img: /assets/img/avatar.png
 share-img: /assets/img/avatar.png
 tags: [checklist, security]
 category: Checklists
+toc: true
 ---
 
 This checklist is a personal reference tool for me, as well as a useful tool if you got a penetration test report saying vague stuff like "secure configuration" and "hardening" and you want to actually find out what to type into your keyboard.
