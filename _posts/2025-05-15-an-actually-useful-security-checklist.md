@@ -49,7 +49,7 @@ The best way to quickly harden a MySQL installation is to run the built-in `mysq
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host!='localhost'; FLUSH PRIVILEGES;"
@@ -62,7 +62,7 @@ sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host!='localhost'; F
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 mysql -u root -p
@@ -83,7 +83,7 @@ exit;
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 sudo mysql
@@ -119,7 +119,7 @@ Unless otherwise stated, most of the configuration changes below will require yo
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/ssh/sshd_config
@@ -136,7 +136,7 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/ssh/sshd_config
@@ -153,7 +153,7 @@ PermitRootLogin no
 
 You can enforce strong SSH passwords using PAM.
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 Install the PAM package:
 
@@ -228,7 +228,7 @@ qwerty
 
 The OpenSSH service should only be accessible to a limited range of IP addresses, ideally off a whitelist that is enforced by the local firewall and/or by the OpenSSH service configuration file. You can use the `AllowUsers` and `AllowGroups` directives to make access as granular as possible.
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/ssh/sshd_config
@@ -270,7 +270,7 @@ File locations may also vary depending on how you set up your web server. You ma
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(ssl config files)
@@ -285,7 +285,7 @@ SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/conf-enabled/security.conf
@@ -305,7 +305,7 @@ TraceEnable Off
 
 The default Apache error page exposes version information and shows exactly what version and build of Apache you have on your server. To conceal this information, you should create a custom error page and set it as the default error page in the Apache configuration file.
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
@@ -320,7 +320,7 @@ ErrorDocument 404 {file}
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/conf-enabled/security.conf
@@ -385,7 +385,7 @@ RedirectMatch 404 /\.svn
 <summary>Expand...</summary>
 The maximum age value can vary depending on your preferences, but the default value of 31536000 I usually use has never caused any issues.
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
@@ -403,7 +403,7 @@ Header always set Strict-Transport-Security max-age=31536000
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
@@ -420,7 +420,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 <details markdown="1">
 <summary>Expand...</summary>
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/mods-enabled/status.conf
@@ -461,7 +461,7 @@ export CATALINA_HOME={directory}
 
 The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1).
 
-##### Debian/Ubuntu:
+##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) $CATALINA_HOME/webapps/manager/META-INF/context.xml
