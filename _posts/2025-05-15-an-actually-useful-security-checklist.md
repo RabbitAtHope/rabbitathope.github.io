@@ -309,6 +309,23 @@ Header always set Strict-Transport-Security max-age=31536000
 
 </details>
 
+### 📌 Enforce HTTP To HTTPS Conversion
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+#### Debian/Ubuntu:
+
+```console
+(editor) /etc/apache2/sites-enabled/(config files)
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+```
+
+</details>
+
 ### 📌 Hide Server Information
 
 <details markdown="1">
