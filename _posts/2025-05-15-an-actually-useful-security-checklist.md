@@ -136,6 +136,8 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 <details markdown="1">
 <summary>Expand...</summary>
 
+##### Debian/Ubuntu:
+
 ```console
 (editor) /etc/ssh/sshd_config
 
@@ -151,7 +153,9 @@ PermitRootLogin no
 
 You can enforce strong SSH passwords using PAM.
 
-First, install the PAM package:
+##### Debian/Ubuntu:
+
+Install the PAM package:
 
 ```console
 apt install libpam-pwquality
@@ -299,7 +303,9 @@ TraceEnable Off
 <details markdown="1">
 <summary>Expand...</summary>
 
-The default Apache error page exposes version information and shows exactly what version and build of Apache you have on your server. To conceal this information, you should create a custom error page and set it as the default error page in the Apache configuration file:
+The default Apache error page exposes version information and shows exactly what version and build of Apache you have on your server. To conceal this information, you should create a custom error page and set it as the default error page in the Apache configuration file.
+
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
@@ -413,6 +419,8 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 <details markdown="1">
 <summary>Expand...</summary>
+
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/mods-enabled/status.conf
