@@ -255,7 +255,7 @@ service apache2 restart
 systemctl restart apache2
 ```
 
-File locations may also vary depending on how you set up your web server.
+File locations may also vary depending on how you set up your web server. You may also need to install certain modules (i.e. mod_rewrite, mod_status) using `a2enmod` where needed.
 
 ### 📌 Disable SSLv2/SSLv3/TLSv1/TLSv1.1
 
@@ -309,23 +309,6 @@ Header always set Strict-Transport-Security max-age=31536000
 
 </details>
 
-### 📌 Enforce HTTP To HTTPS Rewrite
-
-<details markdown="1">
-<summary>Expand...</summary>
-
-#### Debian/Ubuntu:
-
-```console
-(editor) /etc/apache2/sites-enabled/(config files)
-
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-```
-
-</details>
-
 ### 📌 Hide Server Information
 
 <details markdown="1">
@@ -370,6 +353,23 @@ RedirectMatch 404 /\.svn
 
 {: .box-success}
 ✅ **Verification**: Browse to these directories and files in any web browser and verify that you receive either a 403 Forbidden or a 404 Not Found response. You can also use curl.
+
+</details>
+
+### 📌 <span class='highlight'>mod_rewrite</span>: Enforce HTTP To HTTPS Rewrite
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+#### Debian/Ubuntu:
+
+```console
+(editor) /etc/apache2/sites-enabled/(config files)
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+```
 
 </details>
 
