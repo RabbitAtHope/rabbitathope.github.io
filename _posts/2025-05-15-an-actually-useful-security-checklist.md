@@ -14,11 +14,15 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-# 🗄️ Database Services
+# 🗄️ Servers
 
 ---
 
-## 🗄️ MariaDB
+## 🗄️ Database Services
+
+---
+
+### 🗄️ MariaDB
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -30,7 +34,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-## 🗄️ MySQL
+### 🗄️ MySQL
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -40,12 +44,12 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 The best way to quickly harden a MySQL installation is to run the built-in `mysql_secure_installation` script and follow all the instructions it gives you, but manual hardening steps are provided below.
 
-### 📌 Disable Remote Root Login
+#### 📌 Disable Remote Root Login
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host!='localhost'; FLUSH PRIVILEGES;"
@@ -53,12 +57,12 @@ sudo mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host!='localhost'; F
 
 </details>
 
-### 📌 Remove Anonymous Accounts
+#### 📌 Remove Anonymous Accounts
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 mysql -u root -p
@@ -74,12 +78,12 @@ exit;
 
 </details>
 
-### 📌 Set Strong Root Password
+#### 📌 Set Strong Root Password
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 sudo mysql
@@ -96,11 +100,11 @@ exit;
 
 ---
 
-# 🔒 Secure Shell (SSH) Services
+## 🔒 Secure Shell (SSH) Services
 
 ---
 
-## 🔒 OpenSSH Server
+### 🔒 OpenSSH Server
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -110,12 +114,12 @@ exit;
 
 Unless otherwise stated, most of the configuration changes below will require you to reload or restart the service to fully apply them.
 
-### 📌 Disable Insecure Ciphers
+#### 📌 Disable Insecure Ciphers
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/ssh/sshd_config
@@ -127,7 +131,7 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.
 
 </details>
 
-### 📌 Disable Root Login
+#### 📌 Disable Root Login
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -140,7 +144,7 @@ PermitRootLogin no
 
 </details>
 
-### 📌 Enforce Strong Passwords
+#### 📌 Enforce Strong Passwords
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -213,14 +217,14 @@ qwerty
 
 </details>
 
-### 📌 Whitelist Access
+#### 📌 Whitelist Access
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 The OpenSSH service should only be accessible to a limited range of IP addresses, ideally off a whitelist that is enforced by the local firewall and/or by the OpenSSH service configuration file. You can use the `AllowUsers` and `AllowGroups` directives to make access as granular as possible.
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/ssh/sshd_config
@@ -235,11 +239,11 @@ Match Address {ip,ip,ip...}
 
 ---
 
-# 🌎 Web (HTTP/HTTPS) Services
+## 🌎 Web (HTTP/HTTPS) Services
 
 ---
 
-## 🌎 Apache HTTP
+### 🌎 Apache HTTP
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -257,12 +261,12 @@ systemctl restart apache2
 
 File locations may also vary depending on how you set up your web server. You may also need to install or enable certain modules (**mod_headers**, **mod_rewrite**, **mod_status**) using `a2enmod` where needed.
 
-### 📌 Disable SSLv2/SSLv3/TLSv1/TLSv1.1
+#### 📌 Disable SSLv2/SSLv3/TLSv1/TLSv1.1
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(ssl config files)
@@ -272,12 +276,12 @@ SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 
 </details>
 
-### 📌 Disable TRACE
+#### 📌 Disable TRACE
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/conf-enabled/security.conf
@@ -290,7 +294,7 @@ TraceEnable Off
 
 </details>
 
-### 📌 Enable Custom Error Page
+#### 📌 Enable Custom Error Page
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -305,12 +309,12 @@ ErrorDocument 404 {file}
 
 </details>
 
-### 📌 Hide Server Information
+#### 📌 Hide Server Information
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/conf-enabled/security.conf
@@ -324,7 +328,7 @@ ServerTokens Prod
 
 </details>
 
-### 📌 Remove Unnecessary Files/Directories
+#### 📌 Remove Unnecessary Files/Directories
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -369,13 +373,13 @@ RedirectMatch 404 /\.svn
 
 </details>
 
-### 📌 <span class='highlight'>mod_headers</span>: Enforce HTTP Strict Transport Security (HSTS) Header
+#### 📌 <span class='highlight'>mod_headers</span>: Enforce HTTP Strict Transport Security (HSTS) Header
 
 <details markdown="1">
 <summary>Expand...</summary>
 The maximum age value can vary depending on your preferences, but the default value of 31536000 I usually use has never caused any issues.
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
@@ -388,12 +392,12 @@ Header always set Strict-Transport-Security max-age=31536000
 
 </details>
 
-### 📌 <span class='highlight'>mod_rewrite</span>: Enforce HTTP To HTTPS Rewrite
+#### 📌 <span class='highlight'>mod_rewrite</span>: Enforce HTTP To HTTPS Rewrite
 
 <details markdown="1">
 <summary>Expand...</summary>
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
@@ -405,7 +409,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 </details>
 
-### 📌 <span class='highlight'>mod_status</span>: Restrict Access To Server Status Page
+#### 📌 <span class='highlight'>mod_status</span>: Restrict Access To Server Status Page
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -426,7 +430,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 ---
 
-## 🌎 Apache Tomcat
+### 🌎 Apache Tomcat
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -442,14 +446,14 @@ Unless otherwise stated, you will usually have to run the Tomcat shutdown and st
 export CATALINA_HOME={directory}
 ```
 
-### 📌 Restrict Access To Manager Application
+#### 📌 Restrict Access To Manager Application
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 The `context.xml` file controls access to the Manager Application that comes bundled with Tomcat. You will usually want to restrict this to only localhost access (127.0.0.1).
 
-#### Debian/Ubuntu:
+##### Debian/Ubuntu:
 
 ```console
 (editor) $CATALINA_HOME/webapps/manager/META-INF/context.xml
@@ -482,7 +486,7 @@ You can also configure a login requirement and a specific user that is authorize
 
 ---
 
-## 🌎 PHP
+### 🌎 PHP
 
 <details markdown="1">
 <summary>Expand...</summary>
