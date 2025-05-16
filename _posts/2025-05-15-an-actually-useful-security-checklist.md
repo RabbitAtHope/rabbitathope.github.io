@@ -303,15 +303,19 @@ TraceEnable Off
 <details markdown="1">
 <summary>Expand...</summary>
 
-The default Apache error page exposes version information and shows exactly what version and build of Apache you have on your server. To conceal this information, you should create a custom error page and set it as the default error page in the Apache configuration file.
+The default Apache error page exposes version information and shows exactly what version and build of Apache you have on your server. To conceal this information, you should create a custom error page and set it as the default error page for 403 Forbidden, 404 Not Found, etc. in the Apache configuration file.
 
 ##### 🐧 Debian/Ubuntu:
 
 ```console
 (editor) /etc/apache2/sites-enabled/(config files)
 
+ErrorDocument 403 {file}
 ErrorDocument 404 {file}
 ```
+
+{: .box-success}
+✅ **Verification**: Browse to a nonexistent directory and verify that you get the custom error page.
 
 </details>
 
