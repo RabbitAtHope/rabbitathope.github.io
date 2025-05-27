@@ -23,7 +23,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-## 🗄️ Database Services
+## 🗄️ <span class='highlight'>Servers</span>: Database Services
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -110,7 +110,7 @@ exit;
 
 ---
 
-## 🔒 Secure Shell (SSH) Services
+## 🔒 <span class='highlight'>Servers</span>: Secure Shell (SSH) Services
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -258,7 +258,7 @@ Match Address {ip,ip,ip...}
 
 ---
 
-## 🌎 Web (HTTP/HTTPS) Services
+## 🌎 <span class='highlight'>Servers</span>: Web (HTTP/HTTPS) Services
 
 <details markdown="1">
 <summary>Expand...</summary>
