@@ -545,6 +545,8 @@ You can also configure a login requirement and a specific user that is authorize
 
 ---
 
+Stuff here...
+
 <details markdown="1">
 <summary>Expand...</summary>
 
@@ -555,6 +557,8 @@ You can also configure a login requirement and a specific user that is authorize
 # 🖥️ Workstations
 
 ---
+
+Stuff here...
 
 <details markdown="1">
 <summary>Expand...</summary>
