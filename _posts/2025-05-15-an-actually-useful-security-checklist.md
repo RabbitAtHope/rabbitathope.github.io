@@ -26,6 +26,12 @@ The most basic, bread-and-butter starting point and the first step to harden a s
 - **Packages**: Linux server installations will come with a package manager, i.e. `apt` or `yum`, and package updates can be applied to the server by running `apt update` / `apt upgrade` or `yum update` regularly. I personally use a maintenance script on our Ubuntu servers that runs both `apt update` / `apt upgrade` and `apt autoclean` / `apt autoremove` to also clean up obsolete or unnecessary packages. There are also RMMs (i.e. Atera, Kaseya, NinjaOne, Ubuntu Pro) that allow you to remotely manage packages and update them.
 - **Operating System**: If you ever need to upgrade an unsupported Linux operating system or kernel to a supported version, Ubuntu LTS provides `apt dist-upgrade` and `do-release-upgrade`, and other Linux server distributions have similar commands and procedures.
 
+---
+
+## 🗄️ <span class='highlight'>Services</span>
+
+---
+
 The specific configuration changes listed below should also be applied to common services that a server might, well, serve. These configuration changes are extremely common findings in penetration tests that use Nessus scanners and other misconfiguration/vulnerability scanners.
 
 <details markdown="1">
@@ -33,14 +39,14 @@ The specific configuration changes listed below should also be applied to common
 
 ---
 
-## 🗄️ <span class='highlight'>Servers</span>: <span class='highlight-green'>Database Services</span>
+## 🗄️ <span class='highlight'>Services</span>: <span class='highlight-green'>Database Services</span>
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 ---
 
-### 🗄️ <span class='highlight'>Servers</span>: <span class='highlight-green'>Database Services</span>: MariaDB
+### 🗄️ <span class='highlight'>Services</span>: <span class='highlight-green'>Database Services</span>: MariaDB
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -52,7 +58,7 @@ The specific configuration changes listed below should also be applied to common
 
 ---
 
-### 🗄️ <span class='highlight'>Servers</span>: <span class='highlight-green'>Database Services</span>: MySQL
+### 🗄️ <span class='highlight'>Services</span>: <span class='highlight-green'>Database Services</span>: MySQL
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -120,14 +126,14 @@ exit;
 
 ---
 
-## 🔒 <span class='highlight'>Servers</span>: <span class='highlight-green'>Secure Shell Services</span>
+## 🔒 <span class='highlight'>Services</span>: <span class='highlight-green'>Secure Shell Services</span>
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 ---
 
-### 🔒 <span class='highlight'>Servers</span>: <span class='highlight-green'>Secure Shell Services</span>: OpenSSH Server
+### 🔒 <span class='highlight'>Services</span>: <span class='highlight-green'>Secure Shell Services</span>: OpenSSH Server
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -268,14 +274,14 @@ Match Address {ip,ip,ip...}
 
 ---
 
-## 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>
+## 🌎 <span class='highlight'>Services</span>: <span class='highlight-green'>Web Services</span>
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 ---
 
-### 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>: Apache HTTP
+### 🌎 <span class='highlight'>Services</span>: <span class='highlight-green'>Web Services</span>: Apache HTTP
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -473,7 +479,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 ---
 
-### 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>: Apache Tomcat
+### 🌎 <span class='highlight'>Services</span>: <span class='highlight-green'>Web Services</span>: Apache Tomcat
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -529,7 +535,7 @@ You can also configure a login requirement and a specific user that is authorize
 
 ---
 
-### 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>: PHP
+### 🌎 <span class='highlight'>Services</span>: <span class='highlight-green'>Web Services</span>: PHP
 
 <details markdown="1">
 <summary>Expand...</summary>
