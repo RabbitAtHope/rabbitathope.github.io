@@ -18,7 +18,11 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-The most basic, bread-and-butter starting point and the first step to harden a server is to make sure its operating system and packages are up to date and currently supported. Running only supported operating systems is the bare minimum requirement for having a secure server network. If you're running unsupported operating systems, you are actively accepting the risks and vulnerabilities associated with doing so, and ideally those servers should be taken off the public Internet and only be accessible internally while you work on upgrading or replacing them.
+The most basic, bread-and-butter starting point and the first step to harden a server is to make sure its operating system and packages are up to date and currently supported. Running only supported operating systems is the bare minimum requirement for having a secure server network.
+
+{: .box-error}
+⛔ If you're running unsupported operating systems, you are **actively accepting the risks and vulnerabilities associated with it**. Ideally, those servers should be taken off the public Internet and only be accessible internally while you work on upgrading or replacing them.
+
 - **Packages**: Linux server installations will come with a package manager, i.e. `apt` or `yum`, and package updates can be applied to the server by running `apt update` / `apt upgrade` or `yum update` regularly. I personally use a maintenance script on our Ubuntu servers that runs both `apt update` / `apt upgrade` and `apt autoclean` / `apt autoremove` to also clean up obsolete or unnecessary packages. There are also RMMs (i.e. Atera, Kaseya, NinjaOne, Ubuntu Pro) that allow you to remotely manage packages and update them.
 - **Operating System**: If you ever need to upgrade an unsupported Linux operating system or kernel to a supported version, Ubuntu LTS provides `apt dist-upgrade` and `do-release-upgrade`, and other Linux server distributions have similar commands and procedures.
 
