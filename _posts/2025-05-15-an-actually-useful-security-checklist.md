@@ -265,7 +265,7 @@ Match Address {ip,ip,ip...}
 
 ---
 
-### 🌎 Apache HTTP
+### 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>: Apache HTTP
 
 <details markdown="1">
 <summary>Expand...</summary>
