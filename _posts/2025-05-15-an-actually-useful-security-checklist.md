@@ -460,7 +460,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 ---
 
-### 🌎 <span class='highlight-green'>Web Services</span>: Apache Tomcat
+### 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>: Apache Tomcat
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -516,7 +516,7 @@ You can also configure a login requirement and a specific user that is authorize
 
 ---
 
-### 🌎 <span class='highlight-green'>Web Services</span>: PHP
+### 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>: PHP
 
 <details markdown="1">
 <summary>Expand...</summary>
