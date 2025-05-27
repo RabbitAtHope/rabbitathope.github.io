@@ -561,7 +561,7 @@ You can also configure a login requirement and a specific user that is authorize
 
 This section applies to any software that is not a service being provided by a server (for that, see the first section) and is instead commercially produced user-facing, customer-facing, client-facing, or enterprise software with a user interface that is sold by a vendor and receives patching and support from said vendor, i.e. Office 365, Teams, Zoom, etc.
 
-Most modern security frameworks, such as NIST (SP 800-171 Control 3.4.8), require **software whitelisting** on workstations as part of your overall posture - that is, controlling what programs employees can install on their laptops and not allowing the installation of unknown or blacklisted programs.
+Most modern security frameworks, such as NIST (SP 800-171 Control 3.4.8), require **software whitelisting** on workstations as part of your overall posture - that is, controlling what programs employees can install on their laptops and not allowing the installation of unknown or blacklisted programs. As such, this section will focus on common enterprise software and the policies, usage requirements, and configuration you should have for that software in your organization, as well as how to set up and manage updates and patching where needed.
 
 <details markdown="1">
 <summary>Expand...</summary>
