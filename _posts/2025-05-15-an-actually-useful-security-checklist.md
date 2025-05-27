@@ -296,6 +296,9 @@ File locations may also vary depending on how you set up your web server. You ma
 SSLProtocol all -SSLv3 -SSLv2 -TLSv1 -TLSv1.1
 ```
 
+{: .box-success}
+✅ **Verification**: Use nmap with the <a href="https://nmap.org/nsedoc/scripts/ssl-enum-ciphers.html">ssl-enum-ciphers</a> script to scan open HTTP/HTTPS ports (usually 80/443) and verify that these ciphers don't appear in the response.
+
 </details>
 
 #### 📌 Disable TRACE
