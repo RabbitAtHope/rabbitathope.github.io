@@ -25,6 +25,9 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ## 🗄️ Database Services
 
+<details markdown="1">
+<summary>Expand...</summary>
+
 ---
 
 ### 🗄️ MariaDB
@@ -103,9 +106,14 @@ exit;
 
 </details>
 
+</details>
+
 ---
 
 ## 🔒 Secure Shell (SSH) Services
+
+<details markdown="1">
+<summary>Expand...</summary>
 
 ---
 
@@ -246,9 +254,14 @@ Match Address {ip,ip,ip...}
 
 </details>
 
+</details>
+
 ---
 
 ## 🌎 Web (HTTP/HTTPS) Services
+
+<details markdown="1">
+<summary>Expand...</summary>
 
 ---
 
@@ -510,6 +523,8 @@ You can also configure a login requirement and a specific user that is authorize
 
 {: .box-note}
 *Common Port(s): **80** (HTTP), **443** (HTTPS), **8080** (Alternate HTTP), **8443** (Alternate HTTPS)*
+
+</details>
 
 </details>
 
