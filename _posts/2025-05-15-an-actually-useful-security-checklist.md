@@ -23,14 +23,14 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-## 🗄️ <span class='highlight'>Servers</span>: Database Services
+## 🗄️ <span class='highlight'>Servers</span>: <span class='highlight-green'>Database Services</span>
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 ---
 
-### 🗄️ MariaDB
+### 🗄️ <span class='highlight'>Servers</span>: <span class='highlight-green'>Database Services</span>: MariaDB
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -42,7 +42,7 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
-### 🗄️ MySQL
+### 🗄️ <span class='highlight'>Servers</span>: <span class='highlight-green'>Database Services</span>: MySQL
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -110,14 +110,14 @@ exit;
 
 ---
 
-## 🔒 <span class='highlight'>Servers</span>: Secure Shell (SSH) Services
+## 🔒 <span class='highlight'>Servers</span>: <span class='highlight-green'>Secure Shell Services</span>
 
 <details markdown="1">
 <summary>Expand...</summary>
 
 ---
 
-### 🔒 OpenSSH Server
+### 🔒 <span class='highlight'>Servers</span>: <span class='highlight-green'>Secure Shell Services</span>: OpenSSH Server
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -258,7 +258,7 @@ Match Address {ip,ip,ip...}
 
 ---
 
-## 🌎 <span class='highlight'>Servers</span>: Web (HTTP/HTTPS) Services
+## 🌎 <span class='highlight'>Servers</span>: <span class='highlight-green'>Web Services</span>
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -460,7 +460,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 ---
 
-### 🌎 Apache Tomcat
+### 🌎 <span class='highlight-green'>Web Services</span>: Apache Tomcat
 
 <details markdown="1">
 <summary>Expand...</summary>
@@ -516,7 +516,7 @@ You can also configure a login requirement and a specific user that is authorize
 
 ---
 
-### 🌎 PHP
+### 🌎 <span class='highlight-green'>Web Services</span>: PHP
 
 <details markdown="1">
 <summary>Expand...</summary>
