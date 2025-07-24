@@ -37,6 +37,17 @@ The most basic, bread-and-butter starting point and the first step to harden a s
 
 ---
 
+### 🗄️ <span class='highlight'>Operating Systems</span>: CentOS
+
+<details markdown="1">
+<summary>Expand...</summary>
+
+</details>
+
+---
+
+---
+
 ### 🗄️ <span class='highlight'>Operating Systems</span>: Ubuntu LTS
 
 <details markdown="1">
@@ -49,7 +60,7 @@ To upgrade an Ubuntu LTS server to a newer LTS version, all you need to do is:
 - `sudo apt dist-upgrade`
 - `sudo reboot now`
 - `sudo do-release-upgrade` (Hit y and [ENTER] when prompted.)
- - A few times you will be asked if you want to keep a configuration file the same or upgrade it. You'll almost always keep the old one by hitting [ENTER]. You can manually fix it afterwards if you need to, but you should never overwrite these if you have existing service configurations on the machine.
+  - You may be asked if you want to keep a configuration file the same or upgrade it. You'll almost always want to keep the old one by hitting [ENTER]. You can manually fix it afterwards if you need to, but you should never overwrite these if you have existing service configurations on the machine.
 - `y` when it prompts you to reboot the server.
 - `sudo apt update` + `sudo apt upgrade` + `sudo apt autoremove` + `sudo apt autoclean` to clean up.
 
