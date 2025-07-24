@@ -18,6 +18,15 @@ This checklist is a personal reference tool for me, as well as a useful tool if 
 
 ---
 
+---
+
+## 🔧 <span class='highlight'>Operating Systems</span>
+
+---
+
+<details markdown="1">
+<summary>Expand...</summary>
+
 The most basic, bread-and-butter starting point and the first step to harden a server is to make sure its operating system and packages are up to date and currently supported. Running only supported operating systems is the bare minimum requirement for having a secure server network.
 
 {: .box-error}
@@ -26,7 +35,7 @@ The most basic, bread-and-butter starting point and the first step to harden a s
 - **Packages**: Linux server installations will come with a package manager, i.e. `apt` or `yum`, and package updates can be applied to the server by running `apt update` / `apt upgrade` or `yum update` regularly. I personally use a maintenance script on our Ubuntu servers that runs both `apt update` / `apt upgrade` and `apt autoclean` / `apt autoremove` to also clean up obsolete or unnecessary packages. There are also open-source solutions (i.e. Ansible) and commercial RMMs (i.e. Atera, Kaseya, NinjaOne, Ubuntu Pro) that allow you to remotely manage packages and update them.
 - **Operating System**: If you need to upgrade an unsupported Linux operating system or kernel to a supported version, Ubuntu LTS provides `apt dist-upgrade` and `do-release-upgrade`, and other Linux server distributions have similar commands and procedures.
 
-The sublists below are specific security changes that apply to **services**.
+</details>
 
 ---
 
@@ -34,10 +43,10 @@ The sublists below are specific security changes that apply to **services**.
 
 ---
 
-The specific configuration changes listed below should be applied to any services that a server, well, serves - whether that service is internal-only or externally facing. These configuration changes are extremely common findings in penetration tests that use Nessus scanners and other misconfiguration/vulnerability scanners.
-
 <details markdown="1">
 <summary>Expand...</summary>
+
+The specific configuration changes listed below should be applied to any services that a server, well, serves - whether that service is internal-only or externally facing. These configuration changes are extremely common findings in penetration tests that use Nessus scanners and other misconfiguration/vulnerability scanners.
 
 ---
 
